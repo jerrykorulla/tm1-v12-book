@@ -1,0 +1,49 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "Docs: Install dependencies",
+      "detail": "Create .venv and install MkDocs from requirements.txt",
+      "type": "shell",
+      "command": "python -m venv .venv && .venv/bin/python -m pip install -r requirements.txt",
+      "windows": {
+        "command": "python -m venv .venv; .venv\\Scripts\\python -m pip install -r requirements.txt",
+        "options": {
+          "shell": { "executable": "powershell.exe", "args": ["-NoProfile", "-Command"] }
+        }
+      },
+      "problemMatcher": []
+    },
+    {
+      "label": "Docs: Preview locally",
+      "detail": "Serve the book at http://127.0.0.1:8000 with live reload",
+      "type": "shell",
+      "command": ".venv/bin/mkdocs serve --open",
+      "windows": {
+        "command": ".venv\\Scripts\\mkdocs serve --open",
+        "options": {
+          "shell": { "executable": "powershell.exe", "args": ["-NoProfile", "-Command"] }
+        }
+      },
+      "dependsOn": "Docs: Install dependencies",
+      "isBackground": true,
+      "problemMatcher": {
+        "owner": "mkdocs",
+        "pattern": {
+          "regexp": "^(ERROR|WARNING)\\s+-\\s+(.*)$",
+          "severity": 1,
+          "message": 2
+        },
+        "background": {
+          "activatesOnStart": true,
+          "beginsPattern": "Building documentation",
+          "endsPattern": "Serving on"
+        }
+      },
+      "group": {
+        "kind": "build",
+        "isDefault": true
+      }
+    }
+  ]
+}

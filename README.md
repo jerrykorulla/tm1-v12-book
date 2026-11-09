@@ -12,6 +12,8 @@ pip install -r requirements.txt
 mkdocs serve
 ```
 
-Then open http://127.0.0.1:8000. Chapters live in [`docs/`](docs/) and the navigation is set in [`mkdocs.yml`](mkdocs.yml).
+Then open http://127.0.0.1:8000.
+
+In VS Code you can instead run the **Docs: Preview locally** task (`Ctrl+Shift+B`). It sets up a `.venv`, installs the requirements and opens the preview in your browser. Chapters live in [`docs/`](docs/) and the navigation is set in [`mkdocs.yml`](mkdocs.yml).
 
 Every push to `main` publishes the site to GitHub Pages through [`.github/workflows/deploy-docs.yml`](.github/workflows/deploy-docs.yml).
