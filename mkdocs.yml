@@ -43,10 +43,15 @@ markdown_extensions:
   - md_in_html
   - tables
   - footnotes
+  - def_list
   - toc:
       permalink: true
   - pymdownx.details
-  - pymdownx.superfences
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
   - pymdownx.highlight:
       anchor_linenums: true
   - pymdownx.inlinehilite
@@ -57,6 +62,14 @@ nav:
   - Home: index.md
   - Concepts:
       - concepts/index.md
+      - concepts/what-is-tm1.md
+      - concepts/tm1-v12.md
+      - concepts/cubes-and-dimensions.md
+      - concepts/elements-and-hierarchies.md
+      - concepts/cells-and-calculation.md
+      - concepts/views-and-subsets.md
+      - concepts/database-objects.md
+      - concepts/glossary.md
   - Setup:
       - setup/index.md
   - Modelling:
