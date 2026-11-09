@@ -21,6 +21,19 @@ The **Sales** cube is built from six dimensions:
 Version × Year × Period × Region × Product × Sales Measure
 ```
 
+Each dimension answers one question about a number in the cube:
+
+| Dimension | Answers the question | What it represents |
+| --- | --- | --- |
+| **Version** | Which scenario? | Whether a number is what really happened (**Actual**), what was planned at the start of the year (**Budget**), or the latest estimate of how the year will end (**Forecast**). Keeping versions side by side lets you compare plan with reality. |
+| **Year** | Which financial year? | The year the number belongs to. Keeping years separate from months lets you compare the same month across years, such as Jan 2025 with Jan 2026. |
+| **Period** | When in the year? | The months of the year, with quarters (Q1 to Q4) and Full Year as totals of those months. |
+| **Region** | Where? | The sales regions the business is split into, with Total Region adding them up to the whole company. |
+| **Product** | What was sold? | The products the business sells, with Total Product adding them up. A real model might group products into categories first. |
+| **Sales Measure** | What is being measured? | The kind of number: how many items were sold (**Units**), what each one sold for (**Price**), and the money taken (**Revenue**). |
+
+The first five dimensions describe the *context* of a number: which scenario, when, where and what. The last dimension, Sales Measure, says *what kind of number* it is. Most TM1 cubes follow this pattern.
+
 A TM1 cube needs at least two dimensions and can have up to 256, although most real cubes have far fewer.
 
 !!! tip "Measures are just another dimension"

@@ -1,5 +1,8 @@
 # Glossary
 
+Address
+:   The list of elements, one from each of a cube's dimensions in the cube's dimension order, that identifies a single cell. For example, `Actual, 2026, Jan, North, Bikes, Units`. Also called a tuple. See [Cells](cubes-and-dimensions.md#cells).
+
 Alias
 :   An alternative name for an element, stored as an attribute. Must be unique in the dimension.
 
@@ -7,7 +10,7 @@ Attribute
 :   Extra information stored against each element of a dimension. Can be string, numeric or alias.
 
 Cell
-:   One value in a cube, identified by one element from each of the cube's dimensions.
+:   One value in a cube, identified by its address: one element from each of the cube's dimensions.
 
 Child
 :   An element that rolls up into a consolidated element, its parent.
