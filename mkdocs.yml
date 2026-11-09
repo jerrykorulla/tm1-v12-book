@@ -1,0 +1,70 @@
+site_name: TM1 v12 Book
+site_description: An open textbook on IBM Planning Analytics / TM1 v12. Unofficial; not affiliated with IBM.
+site_author: Jerry Korulla George
+site_url: https://jerrykorulla.github.io/tm1-v12-book/
+repo_url: https://github.com/jerrykorulla/tm1-v12-book
+repo_name: jerrykorulla/tm1-v12-book
+edit_uri: edit/main/docs/
+copyright: >-
+  Text &copy; 2026 Jerry Korulla George, licensed under
+  <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a>.
+  Code samples licensed under MIT.
+  Not affiliated with IBM.
+
+theme:
+  name: material
+  features:
+    - navigation.tabs
+    - navigation.sections
+    - navigation.indexes
+    - navigation.top
+    - navigation.footer
+    - search.suggest
+    - search.highlight
+    - content.code.copy
+    - content.action.edit
+  palette:
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: indigo
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: indigo
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
+
+markdown_extensions:
+  - admonition
+  - attr_list
+  - md_in_html
+  - tables
+  - footnotes
+  - toc:
+      permalink: true
+  - pymdownx.details
+  - pymdownx.superfences
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.inlinehilite
+  - pymdownx.tabbed:
+      alternate_style: true
+
+nav:
+  - Home: index.md
+  - Concepts:
+      - concepts/index.md
+  - Setup:
+      - setup/index.md
+  - Modelling:
+      - modelling/index.md
+  - TurboIntegrator:
+      - turbointegrator/index.md
+  - Rules:
+      - rules/index.md
+  - REST API:
+      - rest-api/index.md
+  - License: license.md
