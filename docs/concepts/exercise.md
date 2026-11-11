@@ -263,6 +263,7 @@ FEEDERS;
     - **Context:** Version = Budget, Year = 2026, Region = Total Region, Sales Measure = Revenue
 
     Some cells may be empty, depending on the Budget data you entered in Part 9. This part is about which **rows** appear, not the values.
+
 5. Add another product, **Pumps**, under Total Product.
 
 **Observe:** Reopen the view. Pumps appears, because `All Products` is dynamic. Open `Original Products`: it still lists only three products, because static subsets don't change. See [Subsets](views-and-subsets.md#subsets).
