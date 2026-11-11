@@ -45,3 +45,6 @@ TM1 has two kinds of saved view:
 Views are used by people, for reports and data entry, and by processes, as a data source for TurboIntegrator.
 
 Like subsets, views can be public or private.
+
+!!! example "Try it"
+    Build static and dynamic subsets and a saved view in [Part 10 of the hands-on exercise](exercise.md#part-10-build-a-view-and-a-dynamic-subset).

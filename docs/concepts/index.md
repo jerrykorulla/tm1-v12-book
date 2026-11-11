@@ -13,6 +13,7 @@ This chapter explains the ideas you need before you build anything in TM1: what 
 | [How cells get their values](cells-and-calculation.md) | Input cells, consolidations, rules and feeders |
 | [Views and subsets](views-and-subsets.md) | How you select and look at slices of a cube |
 | [Database objects](database-objects.md) | Processes, chores, control objects, security and sandboxes |
+| [Hands-on: build the Sales cube](exercise.md) | Build the sample model and see every concept above at work |
 | [Glossary](glossary.md) | Short definitions of the terms used in this book |
 
 ## The sample model
@@ -29,3 +30,5 @@ Examples throughout this book use one small sales planning model. It has a singl
 | Sales Measure | Units, Price, Revenue |
 
 A single number in this cube might be "actual units of bikes sold in the North region in January 2026".
+
+You build this model yourself in the [hands-on exercise](exercise.md) at the end of the chapter.

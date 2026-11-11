@@ -167,3 +167,6 @@ Also note that a feeder flag is not removed when the source cell is cleared. The
 If a cube's rules leave out `SKIPCHECK;`, TM1 doesn't skip empty cells in areas with rules. Totals are always correct without any feeders, but calculation can be very slow on large cubes. Most production cubes with rules use `SKIPCHECK;` and feeders.
 
 The [Rules](../rules/index.md) chapter covers feeders in more depth, including feeding across cubes and how to find feeder problems.
+
+!!! example "Try it"
+    See every idea on this page at work, including a broken total and an underfed rule, in [Parts 5 to 9 of the hands-on exercise](exercise.md#part-5-enter-data-and-watch-totals).

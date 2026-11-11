@@ -80,3 +80,6 @@ An **attribute** is extra information stored against each element of a dimension
 **Aliases** let users see and use a different name for an element. For example, a product might have the element name `P-1001` and the alias `Mountain Bike`. Alias values must be unique in the dimension, among themselves and among element names.
 
 Attribute values are stored in a hidden cube named `}ElementAttributes_<dimension>`, for example `}ElementAttributes_Product`. See [control objects](database-objects.md#control-objects).
+
+!!! example "Try it"
+    Build consolidations, check levels and add an alias in [Parts 2 and 3 of the hands-on exercise](exercise.md#part-2-create-the-dimensions).

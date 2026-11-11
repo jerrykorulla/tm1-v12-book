@@ -69,3 +69,6 @@ TM1 is built for this. It stores only the cells that hold a value; empty cells t
 ## Dimension order
 
 The order of dimensions in a cube is set when you create it, and every cell address lists elements in that order. The order also affects how much memory the cube uses. The [Modelling](../modelling/index.md) chapter explains how to choose it.
+
+!!! example "Try it"
+    Build the Sales dimensions and cube in [Parts 2 and 4 of the hands-on exercise](exercise.md#part-2-create-the-dimensions).

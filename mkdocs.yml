@@ -69,6 +69,7 @@ nav:
       - concepts/cells-and-calculation.md
       - concepts/views-and-subsets.md
       - concepts/database-objects.md
+      - concepts/exercise.md
       - concepts/glossary.md
   - Setup:
       - setup/index.md

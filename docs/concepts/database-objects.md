@@ -58,3 +58,6 @@ TM1 also has built-in groups. The most important is **ADMIN**, whose members hav
 A **sandbox** is a private set of a user's changes to a database. When a user works in a sandbox, their edits are kept separate from the shared data, which is called the **base**. They can try out what-if scenarios and, when they are ready, **commit** the changes to the base or discard them.
 
 Sandboxes are useful in planning, where people want to test numbers before others see them.
+
+!!! example "Try it"
+    Find your own attribute values inside a control cube in [Part 11 of the hands-on exercise](exercise.md#part-11-look-behind-the-scenes).
