@@ -13,4 +13,4 @@ The agent reads each file, works its content into the right pages under `docs/`,
 
 Everything in this folder except this README and `LOG.md` is ignored by git, so your source files are never pushed to the public repo. Keep your own copies if you need them.
 
-Only the rewritten content in `docs/` is published. Agents are told to rewrite in their own words and to leave out client names, real data and credentials, but check before you commit.
+Only the rewritten content in `docs/` is published. Agents are told to rewrite in their own words and to follow the confidentiality rules in [AGENTS.md](../AGENTS.md#confidentiality): no source code, internal APIs, server internals, client names, real data or credentials. Changes reach the site only through a pull request you review, so check the diff before you merge.

@@ -50,7 +50,45 @@ Readers are TM1 beginners and v11 users moving to v12. Write for them:
 
 - The book's text is licensed CC BY 4.0, so everything in it must be original writing. **Rewrite source material in your own words.** Short quotes are fine if attributed. Never paste large passages from IBM documentation, books, courses or blog posts.
 - Code samples are MIT licensed. Don't copy code from sources with incompatible licences; write a fresh example instead.
-- Inbox files may contain client names, real data, credentials or internal details. **Never put these into the book.** Replace them with the sample model or neutral examples.
+- Inbox files may contain client names, real data, credentials or internal details. **Never put these into the book.** Replace them with the sample model or neutral examples. See [Confidentiality](#confidentiality).
+
+## Confidentiality
+
+The book and everything committed to this repo are public. Some source material is derived from confidential sources, such as product source code, internal design documents or client work. The book may describe only what a **user** of TM1 can see.
+
+**Allowed:**
+
+- Behaviour a user can observe: what happens when you run a process, send a request or change a setting.
+- Anything in IBM's public documentation: documented REST API entities, endpoints and parameters; documented TI functions; configuration parameters; documented error messages.
+- Examples built on the book's sample model, with made-up data.
+
+**Never allowed:**
+
+| Category | Examples of what to leave out |
+| --- | --- |
+| Source code | Code excerpts, class, function, file or package names, code comments, stack traces |
+| Internal APIs | Undocumented endpoints, parameters, headers or flags; internal service names |
+| Server internals | Internal sequencing ("the server first does X, then Y"), locking, versioning, caching, storage or replica details; internal constant or flag values; hidden or legacy names |
+| Internal infrastructure | Hostnames, URLs, IP addresses, cluster, namespace or environment names; internal ticket, defect or build numbers |
+| Secrets | Passwords, API keys, tokens, certificates, connection strings, even if they look expired or fake |
+| People and clients | Client or company names, employee names, email addresses, real business data |
+| Unreleased plans | Roadmap items, unannounced features, release dates |
+
+Rules:
+
+- **Describe behaviour, not implementation.** If a fact can only be known by reading the code, leave it out. Write "the request fails with an error", not why the code makes it fail.
+- **Don't reveal where something came from.** Don't write "according to the source code", "internally", or name an internal document.
+- **When in doubt, leave it out** and list it under "Left out" in your report so the maintainer can decide.
+- **This applies to everything you commit, not just `docs/`.** That includes `inbox/LOG.md`, commit messages, branch names and pull request descriptions. In the log, describe what you left out in general terms ("server implementation details"), never the details themselves.
+- **Check your own diff before you finish.** Reread every line you added against the table above.
+
+## Committing and publishing
+
+Every push to `main` publishes the site. `main` is protected: changes reach it only through a pull request that the maintainer reviews and merges.
+
+- Don't commit or push unless the user asks.
+- When asked to commit, work on a branch (for example `content/sandboxes`), never on `main`.
+- When asked to publish, open a pull request. **Never merge a pull request** and never bypass the branch protection. The maintainer's review is the final confidentiality check.
 
 ## Adding content from the inbox
 
@@ -67,16 +105,16 @@ Follow these steps:
     - Prefer extending an existing page or section over creating a new one.
     - Create a new page only for a topic that doesn't fit any existing page. Put it in the matching chapter folder, with a short lowercase-hyphenated file name.
     - If a chapter's `index.md` still says "Work in progress", replace that placeholder with a real overview once the chapter has content.
-5. **Write the content** following the style, accuracy and copyright rules above.
+5. **Write the content** following the style, accuracy, copyright and confidentiality rules above.
 6. **Wire it in:**
     - add new pages to `nav:` in `mkdocs.yml`
     - add new pages to the chapter's `index.md` table or list
     - add new terms to `docs/concepts/glossary.md`, in alphabetical order
     - add cross-links from related pages
-7. **Build** with `mkdocs build --strict` and fix any problems.
+7. **Build** with `mkdocs build --strict` and fix any problems. Then reread your whole diff, including `inbox/LOG.md`, against the [Confidentiality](#confidentiality) rules and remove anything that breaks them.
 8. **Record and move the file:**
     - Move each processed file to `inbox/processed/`. Create the folder if needed.
     - Add an entry to the top of `inbox/LOG.md` with the date, the file name, the pages you created or changed, and any open questions.
-9. **Report to the user:** what you added and where, anything you left out and why, conflicts with existing content, and claims that need checking.
+9. **Report to the user:** what you added and where, anything you left out and why, conflicts with existing content, claims that need checking, and anything you left out for confidentiality reasons that the maintainer should know about (in general terms).
 
-Don't commit or push unless the user asks.
+Don't commit or push unless the user asks. See [Committing and publishing](#committing-and-publishing).
