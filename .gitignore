@@ -218,3 +218,8 @@ __marimo__/
 
 # Streamlit
 .streamlit/secrets.toml
+
+# Book inbox: source files stay local; only the README and log are committed
+inbox/*
+!inbox/README.md
+!inbox/LOG.md
