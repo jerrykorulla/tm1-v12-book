@@ -9,8 +9,17 @@ Alias
 Attribute
 :   Extra information stored against each element of a dimension. Can be string, numeric or alias.
 
+Base
+:   The shared, published data in a database, as opposed to the private changes held in a sandbox. `Base` is a reserved name and can't be used for a sandbox.
+
 Cell
 :   One value in a cube, identified by its address: one element from each of the cube's dimensions.
+
+Cellset
+:   The result of an MDX query or view, held on the server and referred to by an ID. Clients use the ID to read or write its cells. See [Effect on cellset IDs](../rest-api/sandboxes.md#effect-on-cellset-ids).
+
+Change set
+:   A group of cell writes that can be undone together. See [Change sets and undo](../rest-api/sandboxes.md#change-sets-and-undo).
 
 Child
 :   An element that rolls up into a consolidated element, its parent.
@@ -60,6 +69,9 @@ PAW
 Process
 :   A TurboIntegrator script that runs inside the database. Also called a TI process.
 
+Publish
+:   To copy a sandbox's changes into the base. Planning Analytics Workspace calls this committing. See [Publishing and merging](../rest-api/sandboxes.md#publishing-and-merging).
+
 REST API
 :   The HTTP interface to TM1. In v12, the only programming interface.
 
@@ -67,7 +79,10 @@ Rule
 :   A formula that calculates cell values in a cube.
 
 Sandbox
-:   A private set of a user's changes, kept separate from the shared base data until committed.
+:   A private set of a user's changes, kept separate from the shared base data until published (committed). See [Sandboxes](../rest-api/sandboxes.md).
+
+Sandbox dimension
+:   A virtual, read-only dimension called `Sandboxes` that lists `Base` and a user's own sandboxes, so they can be compared in one query. Available when `EnableSandboxDimension` is on. See [The sandbox dimension](../rest-api/sandboxes.md#the-sandbox-dimension).
 
 Sparsity
 :   The fact that most possible cells in a cube are empty. TM1 stores only non-empty cells.

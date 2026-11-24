@@ -59,5 +59,9 @@ A **sandbox** is a private set of a user's changes to a database. When a user wo
 
 Sandboxes are useful in planning, where people want to test numbers before others see them.
 
+A sandbox stores only the cells you changed. Every other cell is read from the base, so a sandbox is not a copy of the cube. Each sandbox belongs to one user, and other users, administrators included, can't see it. Your sandboxes are still there the next time you log in.
+
+To work with sandboxes from code, see [Sandboxes](../rest-api/sandboxes.md) in the REST API chapter.
+
 !!! example "Try it"
     Find your own attribute values inside a control cube in [Part 11 of the hands-on exercise](exercise.md#part-11-look-behind-the-scenes).

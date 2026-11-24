@@ -81,4 +81,5 @@ nav:
       - rules/index.md
   - REST API:
       - rest-api/index.md
+      - rest-api/sandboxes.md
   - License: license.md
